@@ -1,0 +1,95 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Стиль Glassmorphism для сайта — промпт для нейросети и пример | Дизайн-промпты</title><meta name="description" content="Полупрозрачные панели с размытием фона, тонкой светлой рамкой и яркими градиентными пятнами позади. Палитра, шрифты с кириллицей и готовый промпт на русском для Cursor, Claude, Тильды и Figma."><link rel="canonical" href="https://ztim2008.github.io/dizain-prompty/stil/glassmorphism/">
+<meta property="og:type" content="website"><meta property="og:title" content="Стиль Glassmorphism для сайта — промпт для нейросети и пример | Дизайн-промпты"><meta property="og:description" content="Полупрозрачные панели с размытием фона, тонкой светлой рамкой и яркими градиентными пятнами позади. Палитра, шрифты с кириллицей и готовый промпт на русском для Cursor, Claude, Тильды и Figma."><meta property="og:url" content="https://ztim2008.github.io/dizain-prompty/stil/glassmorphism/"><meta property="og:locale" content="ru_RU"><meta property="og:image" content="https://ztim2008.github.io/dizain-prompty/og.png">
+<link rel="icon" href="/dizain-prompty/favicon.svg" type="image/svg+xml"><style>:root{--bg:#FBFAF7;--ink:#16141F;--mut:#6B6880;--ac:#5B3DF5;--line:#E7E4EE;--card:#fff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+a{color:var(--ac)}.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.top{position:sticky;top:0;z-index:9;background:rgba(251,250,247,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;justify-content:space-between;align-items:center;height:60px}.logo{font-weight:800;color:var(--ink);text-decoration:none;font-size:18px}.logo span{color:var(--ac)}
+.nav nav a{margin-left:20px;color:var(--ink);text-decoration:none;font-weight:600}
+.hero{padding:64px 20px 40px}.kicker{color:var(--ac);font-weight:700;text-transform:uppercase;font-size:13px;letter-spacing:.08em}
+h1{font-size:clamp(32px,5vw,58px);line-height:1.05;letter-spacing:-.03em;margin:.2em 0;max-width:900px}
+.lead{font-size:19px;color:var(--mut);max-width:720px}.tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.tools span,.chips button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 14px;font-size:14px;font-weight:600}
+.sechead{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+#q{padding:12px 16px;border:1px solid var(--line);border-radius:12px;min-width:280px;font:inherit}
+.chips{display:flex;gap:8px;margin:12px 0 20px;flex-wrap:wrap}.chips button{cursor:pointer;font-family:inherit}.chips .on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
+.scard{display:block;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:12px;color:var(--ink);text-decoration:none;transition:.2s}
+.scard:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(22,20,31,.08)}.scard h3{margin:12px 6px 2px}.scard p{margin:0 6px 6px;color:var(--mut);font-size:14px}
+.pv.mini{font-size:11px;padding:12px;pointer-events:none;height:170px}.pv.mini .hero{padding:12px;margin-bottom:10px}.pv.mini .card{height:44px;padding:8px}.pv.mini .ic{width:20px;height:20px}.pv.mini .cards{grid-template-columns:repeat(3,1fr)!important}
+.gen{margin:70px auto}.genrow{display:flex;gap:16px;flex-wrap:wrap;margin:16px 0}.genrow label{display:flex;flex-direction:column;font-weight:600;font-size:14px;gap:6px}
+select,input[type=color]{padding:10px;border:1px solid var(--line);border-radius:10px;font:inherit;min-width:200px;height:46px;background:#fff}
+.pbox{position:relative;background:#16141F;color:#E9E7F5;border-radius:16px;padding:20px}.pbox pre{padding-top:34px;white-space:pre-wrap;margin:0;font:14px/1.6 ui-monospace,Consolas,monospace;max-height:520px;overflow:auto}
+.copy{position:absolute;top:12px;right:12px;background:var(--ac);color:#fff;border:0;border-radius:10px;padding:8px 14px;font-weight:700;cursor:pointer}
+.crumbs{margin-top:24px;font-size:14px;color:var(--mut)}.style h1{margin-top:12px}.two{display:grid;grid-template-columns:1.4fr 1fr;gap:32px;margin:24px 0}
+.sw{list-style:none;padding:0}.sw li{display:flex;align-items:center;gap:10px;margin:6px 0}.sw span{width:28px;height:28px;border-radius:8px;border:1px solid var(--line)}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}.tabs button{border:1px solid var(--line);background:#fff;padding:10px 16px;border-radius:10px;font:inherit;font-weight:600;cursor:pointer}.tabs .on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.next{margin:32px 0}.foot{border-top:1px solid var(--line);padding:28px 0;color:var(--mut);font-size:14px;margin-top:40px}
+@media(max-width:820px){.two{grid-template-columns:1fr}.grid{grid-template-columns:1fr}#q{min-width:0;width:100%}.hero{padding-top:36px}.nav nav a{margin-left:12px}}
+.pv{padding:18px;border-radius:18px;overflow:hidden}.pv .hero{padding:22px;margin-bottom:14px}.pv h3{margin:0 0 6px;font-size:1.5em}.pv p{margin:0 0 14px;opacity:.85}
+.pv .btn{display:inline-block;padding:10px 18px;font-weight:700;text-decoration:none;border:0;cursor:pointer;font:inherit;font-weight:700}
+.pv .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.pv .card{padding:14px}.pv .ic{width:32px;height:32px;margin-bottom:8px}.pv b{display:block}.pv small{opacity:.75}
+@media(max-width:560px){.pv .cards{grid-template-columns:1fr!important}}.pv-glassmorphism{color:#fff;font-family:system-ui,sans-serif;background:radial-gradient(circle at 15% 20%,#7F5AF0 0,transparent 40%),radial-gradient(circle at 85% 80%,#2CB1FF 0,transparent 40%),#0F1B4C}
+.pv-glassmorphism .card,.pv-glassmorphism .hero{background:rgba(255,255,255,.12);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.3);border-radius:20px}
+.pv-glassmorphism .btn{background:linear-gradient(90deg,#7F5AF0,#2CB1FF);color:#fff;border-radius:12px}.pv-glassmorphism .ic{background:rgba(255,255,255,.35);border-radius:50%}</style><script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Как сделать сайт в стиле Glassmorphism с помощью нейросети", "inLanguage": "ru", "step": [{"@type": "HowToStep", "text": "Скопируйте промпт"}, {"@type": "HowToStep", "text": "Вставьте его в нейросеть (Cursor, Claude, GigaChat и др.)"}, {"@type": "HowToStep", "text": "Замените тексты на свои и опубликуйте"}]}</script></head><body>
+<header class="top"><div class="wrap nav"><a class="logo" href="/dizain-prompty/"><span>◆</span> Дизайн-промпты</a><nav><a href="/dizain-prompty/#stili">Стили</a><a href="/dizain-prompty/#generator">Генератор</a></nav></div></header>
+<main><article class="wrap style"><nav class="crumbs"><a href="/dizain-prompty/">Главная</a> / <a href="/dizain-prompty/#stili">Стили</a> / Glassmorphism</nav>
+<h1>Стиль Glassmorphism: промпт и живой пример</h1><p class="lead">Гласморфизм — матовое стекло поверх градиента. Полупрозрачные панели с размытием фона, тонкой светлой рамкой и яркими градиентными пятнами позади.</p>
+<div class="two"><div><h2>Превью</h2><div class="pv pv-glassmorphism"><div class="hero"><h3>Баня на дровах за городом</h3><p>Парная, купель и чан. Бронь онлайн за 1 минуту.</p><button class="btn" type="button">Забронировать</button></div>
+<div class="cards"><div class="card"><div class="ic"></div><b>Парная</b><small>до 8 гостей</small></div><div class="card"><div class="ic"></div><b>Купель</b><small>ледяная вода</small></div><div class="card"><div class="ic"></div><b>Чан</b><small>с травами</small></div></div></div></div><div class="info"><h2>Когда подходит</h2><p>Финтех, SaaS-дашборды, музыкальные и IT-продукты, премиальные лендинги.</p><h2>Палитра</h2><ul class="sw"><li><span style="background:#0F1B4C"></span><code>#0F1B4C</code> фон</li><li><span style="background:#7F5AF0"></span><code>#7F5AF0</code> пятно 1</li><li><span style="background:#2CB1FF"></span><code>#2CB1FF</code> пятно 2</li><li><span style="background:#FFFFFF"></span><code>#FFFFFF</code> текст/стекло</li></ul><h2>Шрифты с кириллицей</h2><p>Inter, Manrope, Golos Text</p></div></div>
+<h2>Промпт</h2><div class="tabs" role="tablist"><button role="tab" class="on" data-tab="p0">Универсальный</button><button role="tab" class="" data-tab="p1">Для Тильды (HTML-блок)</button><button role="tab" class="" data-tab="p2">Для Figma</button></div><div class="pbox" id="w0" ><button class="copy" data-t="p0">Скопировать</button><pre id="p0">Ты опытный веб-дизайнер и фронтенд-разработчик. Сверстай адаптивный лендинг в стиле «Glassmorphism».
+
+Стиль: Полупрозрачные панели с размытием фона, тонкой светлой рамкой и яркими градиентными пятнами позади.
+Палитра: #0F1B4C (фон), #7F5AF0 (пятно 1), #2CB1FF (пятно 2), #FFFFFF (текст/стекло).
+Шрифты: Inter, Manrope, Golos Text. Подключи шрифты локально (woff2) с поддержкой кириллицы.
+Правила стиля: фон тёмно-синий с 2–3 размытыми градиентными кругами; панели background rgba(255,255,255,.12), backdrop-filter blur(16px), border 1px rgba(255,255,255,.3), radius 20px; текст белый; кнопка — светлое стекло или градиент; соблюдать контраст текста не ниже 4.5:1.
+
+Структура страницы:
+1. Шапка: логотип, меню из 4 пунктов, кнопка действия.
+2. Первый экран: заголовок H1 до 8 слов, подзаголовок, основная и вторичная кнопки, визуал.
+3. Преимущества: 3–6 карточек с иконкой, заголовком и одной строкой текста.
+4. Услуги или тарифы с ценами.
+5. Отзывы или кейсы.
+6. Частые вопросы (аккордеон).
+7. Форма заявки: имя, телефон, согласие на обработку персональных данных (152-ФЗ).
+8. Подвал с контактами.
+
+Требования: семантичный HTML5, mobile-first, контраст по WCAG AA, состояния :hover и :focus-visible, без внешних CDN, все тексты на русском. Выдай один файл index.html со встроенными CSS и JS.</pre></div><div class="pbox" id="w1" hidden><button class="copy" data-t="p1">Скопировать</button><pre id="p1">Сделай код для HTML-блока Тильды (блок T123) в стиле «Glassmorphism».
+
+Палитра: #0F1B4C (фон), #7F5AF0 (пятно 1), #2CB1FF (пятно 2), #FFFFFF (текст/стекло). Шрифты: Inter, Manrope, Golos Text (если шрифта нет в Тильде, используй системный аналог).
+Правила стиля: фон тёмно-синий с 2–3 размытыми градиентными кругами; панели background rgba(255,255,255,.12), backdrop-filter blur(16px), border 1px rgba(255,255,255,.3), radius 20px; текст белый; кнопка — светлое стекло или градиент; соблюдать контраст текста не ниже 4.5:1.
+
+Ограничения Тильды:
+- весь CSS внутри &lt;style&gt;, все классы с префиксом .dp- чтобы не конфликтовать со стилями Тильды;
+- не используй глобальные селекторы body, html, *, h1;
+- JS только чистый, внутри &lt;script&gt;, обёрнутый в IIFE;
+- ширина блока 100%, контент по центру до 1200px; адаптив под 980, 640 и 480px;
+- ссылки на кнопках оставь как # с комментарием, куда подставить попап Тильды (#popup:form).
+
+Блок: первый экран с заголовком, подзаголовком, кнопкой и тремя карточками преимуществ. Тексты на русском.</pre></div><div class="pbox" id="w2" hidden><button class="copy" data-t="p2">Скопировать</button><pre id="p2">Создай в Figma дизайн лендинга в стиле «Glassmorphism» (десктоп 1440 и мобайл 390).
+
+1. Сначала заведи Local Styles: цвета #0F1B4C (фон), #7F5AF0 (пятно 1), #2CB1FF (пятно 2), #FFFFFF (текст/стекло); текстовые стили H1/H2/H3/Body/Caption на шрифтах Inter, Manrope, Golos Text.
+2. Эффекты: фон тёмно-синий с 2–3 размытыми градиентными кругами; панели background rgba(255,255,255,.12), backdrop-filter blur(16px), border 1px rgba(255,255,255,.3), radius 20px; текст белый; кнопка — светлое стекло или градиент; соблюдать контраст текста не ниже 4.5:1.
+3. Сетка: 12 колонок, поля 120 px на десктопе; 4 колонки, поля 16 px на мобайле.
+4. Компоненты с вариантами: Button (primary/secondary, default/hover/disabled), Card, Input, Header.
+5. Все фреймы на Auto Layout, отступы кратны 8.
+6. Экраны: первый экран, преимущества, услуги с ценами, отзывы, FAQ, форма, подвал.
+Тексты на русском, без lorem ipsum.</pre></div>
+<p class="next">Другие стили: <a href="/dizain-prompty/stil/claymorphism/">Claymorphism</a> · <a href="/dizain-prompty/stil/neo-brutalism/">Neo-brutalism</a> · <a href="/dizain-prompty/stil/swiss-minimalizm/">Swiss / минимализм</a> · <a href="/dizain-prompty/stil/bento-grid/">Bento grid</a> · <a href="/dizain-prompty/stil/dark-tech-neon/">Dark tech / неон</a></p></article></main><footer class="foot"><div class="wrap">© 2026 Дизайн-промпты · готовые промпты для нейросетей на русском</div></footer>
+<script>document.addEventListener('click',e=>{const c=e.target.closest('.copy');if(c){navigator.clipboard.writeText(document.getElementById(c.dataset.t).textContent).then(()=>{c.textContent='Скопировано ✓';setTimeout(()=>c.textContent='Скопировать',1500)})}
+const t=e.target.closest('[data-tab]');if(t){document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('on',b===t));document.querySelectorAll('.pbox[id^=w]').forEach(p=>p.hidden=p.id!=='w'+t.dataset.tab.slice(1))}});
+const q=document.getElementById('q');if(q){let f='';const run=()=>{let n=0;document.querySelectorAll('.scard').forEach(c=>{const ok=c.dataset.q.includes(q.value.toLowerCase().trim())&&c.dataset.q.includes(f);c.hidden=!ok;n+=ok});document.getElementById('empty').hidden=n>0};q.oninput=run;
+document.getElementById('chips').onclick=e=>{const b=e.target.closest('button');if(!b)return;f=b.dataset.f;document.querySelectorAll('#chips button').forEach(x=>x.classList.toggle('on',x===b));run()}}
+if(window.GEN){const g=()=>{const n=GEN.niches[gn.value],s=GEN.styles[gs.value],c=gc.value.toUpperCase();
+gout.textContent=`Ты опытный веб-дизайнер и фронтенд-разработчик. Сделай адаптивный лендинг для ниши «${n.name}» (${n.full}) в стиле «${s.name}».
+
+Стиль: ${s.rules}.
+Базовая палитра стиля: ${s.pal}. Акцентный цвет бренда: ${c} — используй его для кнопок, ссылок и ключевых акцентов, проверь контраст текста на нём (WCAG AA).
+Шрифты: ${s.fonts}, с кириллицей, подключить локально.
+
+Структура блоков:
+${n.blocks.split('; ').map((b,i)=>(i+1)+'. '+b.charAt(0).toUpperCase()+b.slice(1)).join('\n')}
+
+Тексты пиши на русском, конкретно и без воды, не выдумывай цифры, рейтинги и отзывы — ставь понятные заглушки в [квадратных скобках]. Mobile-first, семантичный HTML5, без внешних CDN, форма с согласием на обработку персональных данных (152-ФЗ). Выдай один файл index.html со встроенными CSS и JS.`};[gn,gs,gc].forEach(x=>x.oninput=g);g()}
+</script></body></html>
