@@ -1,5 +1,5 @@
 # Дизайн-промпты
 
-Прототип: https://ztim2008.github.io/dizain-prompty/
+https://ztim2008.github.io/dizain-prompty/
 
-Сборка: `cd _src && python3 build.py` (генерирует dist/).
+Сборка: python3 fonts.py && python3 build.py → dist/. Шрифты — OFL (Google Fonts), self-hosted в /fonts.

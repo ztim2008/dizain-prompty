@@ -1,6 +1,6 @@
 document.addEventListener('click',e=>{const c=e.target.closest('.copy');if(c){navigator.clipboard.writeText(document.getElementById(c.dataset.t).textContent).then(()=>{c.textContent='Скопировано ✓';setTimeout(()=>c.textContent='Скопировать',1500)})}
 const t=e.target.closest('[data-tab]');if(t){document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('on',b===t));document.querySelectorAll('.pbox[id^=w]').forEach(p=>p.hidden=p.id!=='w'+t.dataset.tab.slice(1))}});
-const q=document.getElementById('q');if(q){let f='';const run=()=>{let n=0;document.querySelectorAll('.scard').forEach(c=>{const ok=c.dataset.q.includes(q.value.toLowerCase().trim())&&c.dataset.q.includes(f);c.hidden=!ok;n+=ok});document.getElementById('empty').hidden=n>0};q.oninput=run;
+const q=document.getElementById('q');if(q){let f='';const run=()=>{let n=0;document.querySelectorAll('.scard').forEach(c=>{const ok=c.dataset.q.includes(q.value.toLowerCase().trim())&&(!f||c.dataset.g.split("|").includes(f));c.hidden=!ok;n+=ok});document.getElementById('empty').hidden=n>0};q.oninput=run;
 document.getElementById('chips').onclick=e=>{const b=e.target.closest('button');if(!b)return;f=b.dataset.f;document.querySelectorAll('#chips button').forEach(x=>x.classList.toggle('on',x===b));run()}}
 if(window.GEN){const g=()=>{const n=GEN.niches[gn.value],s=GEN.styles[gs.value],c=gc.value.toUpperCase();
 gout.textContent=`Ты опытный веб-дизайнер и фронтенд-разработчик. Сделай адаптивный лендинг для ниши «${n.name}» (${n.full}) в стиле «${s.name}».

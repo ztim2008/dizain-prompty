@@ -38,26 +38,29 @@ dict(slug="dark-tech-neon",name="Dark tech / неон",ru="Тёмный тех-�
  fonts="JetBrains Mono, Onest, Unbounded",
  rules="фон #07080D с тонкой сеткой или шумом; акценты с text-shadow/box-shadow свечением 0 0 20px цвета; рамки 1px полупрозрачные неоновые; подписи и метки моноширинным шрифтом; кнопка с неоновой обводкой и заливкой при наведении; анимации плавные, уважать prefers-reduced-motion"),
 ]
+exec(open("more.py").read())
+for x in S: x.setdefault("grp",GRP[x["slug"]]); x.setdefault("rus",False); x["dark"]=x.get("dark",x["slug"] in ("glassmorphism","dark-tech-neon"))
+S+=S2
 # preview CSS per style (scoped .pv-<slug>)
 PV={
 "claymorphism":""".pv{background:#F4EEFF;color:#2B2140;font-family:Nunito,'Trebuchet MS',system-ui,sans-serif}
 .pv .card,.pv .hero{background:#FBF8FF;border-radius:32px;box-shadow:12px 12px 24px rgba(124,92,255,.22),-8px -8px 18px #fff,inset 2px 2px 6px #fff}
 .pv h3{font-weight:900}.pv .btn{background:#7C5CFF;color:#fff;border-radius:999px;box-shadow:inset -3px -4px 8px rgba(0,0,0,.18),inset 3px 3px 8px rgba(255,255,255,.45),6px 8px 16px rgba(124,92,255,.35)}
 .pv .card:nth-child(2) .ic{background:#FFB86B}.pv .ic{background:#7C5CFF;border-radius:16px}""",
-"neo-brutalism":""".pv{background:#FFF4D6;color:#111;font-family:'Arial Black',Impact,system-ui,sans-serif}
+"neo-brutalism":""".pv{background:#FFF4D6;color:#111;font-family:Unbounded,'Arial Black',system-ui,sans-serif}
 .pv .card,.pv .hero{background:#fff;border:3px solid #111;box-shadow:6px 6px 0 #111;border-radius:8px}
 .pv .hero{background:#3DDC97}.pv h3{text-transform:uppercase}.pv .btn{background:#FF5C8A;color:#111;border:3px solid #111;box-shadow:4px 4px 0 #111;border-radius:6px}
 .pv .ic{background:#FF5C8A;border:3px solid #111}""",
-"glassmorphism":""".pv{color:#fff;font-family:system-ui,sans-serif;background:radial-gradient(circle at 15% 20%,#7F5AF0 0,transparent 40%),radial-gradient(circle at 85% 80%,#2CB1FF 0,transparent 40%),#0F1B4C}
+"glassmorphism":""".pv{color:#fff;font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 15% 20%,#7F5AF0 0,transparent 40%),radial-gradient(circle at 85% 80%,#2CB1FF 0,transparent 40%),#0F1B4C}
 .pv .card,.pv .hero{background:rgba(255,255,255,.12);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.3);border-radius:20px}
 .pv .btn{background:linear-gradient(90deg,#7F5AF0,#2CB1FF);color:#fff;border-radius:12px}.pv .ic{background:rgba(255,255,255,.35);border-radius:50%}""",
-"swiss-minimalizm":""".pv{background:#fff;color:#111;font-family:Helvetica,Arial,system-ui,sans-serif}
+"swiss-minimalizm":""".pv{background:#fff;color:#111;font-family:Inter,Helvetica,Arial,system-ui,sans-serif}
 .pv .hero{border-top:6px solid #E30613;border-radius:0;padding-left:0}.pv .hero h3{font-size:2em;letter-spacing:-.03em;line-height:1}
 .pv .card{border-top:1px solid #111;border-radius:0}.pv .btn{background:#111;color:#fff;border-radius:0}.pv .ic{background:#E30613;border-radius:0}""",
-"bento-grid":""".pv{background:#F5F5F7;color:#1D1D1F;font-family:system-ui,sans-serif}
+"bento-grid":""".pv{background:#F5F5F7;color:#1D1D1F;font-family:Manrope,system-ui,sans-serif}
 .pv .card,.pv .hero{background:#fff;border-radius:24px}.pv .cards{grid-template-columns:2fr 1fr 1fr}.pv .card:nth-child(1){background:#FFD60A}
 .pv .btn{background:#0A84FF;color:#fff;border-radius:999px}.pv .ic{background:#0A84FF;border-radius:10px}""",
-"dark-tech-neon":""".pv{background:#07080D;color:#C9D1E0;font-family:ui-monospace,'JetBrains Mono',Consolas,monospace;background-image:linear-gradient(rgba(0,245,212,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(0,245,212,.06) 1px,transparent 1px);background-size:24px 24px}
+"dark-tech-neon":""".pv{background:#07080D;color:#C9D1E0;font-family:'JetBrains Mono',ui-monospace,Consolas,monospace;background-image:linear-gradient(rgba(0,245,212,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(0,245,212,.06) 1px,transparent 1px);background-size:24px 24px}
 .pv .card,.pv .hero{background:rgba(7,8,13,.8);border:1px solid rgba(0,245,212,.4);border-radius:10px;box-shadow:0 0 18px rgba(0,245,212,.15)}
 .pv h3{color:#00F5D4;text-shadow:0 0 12px rgba(0,245,212,.7)}.pv .btn{background:transparent;color:#F15BB5;border:1px solid #F15BB5;box-shadow:0 0 14px rgba(241,91,181,.5);border-radius:8px}.pv .ic{background:#F15BB5;box-shadow:0 0 12px #F15BB5;border-radius:4px}""",
 }
@@ -65,8 +68,10 @@ PVBASE=""".pv{padding:18px;border-radius:18px;overflow:hidden}.pv .hero{padding:
 .pv .btn{display:inline-block;padding:10px 18px;font-weight:700;text-decoration:none;border:0;cursor:pointer;font:inherit;font-weight:700}
 .pv .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.pv .card{padding:14px}.pv .ic{width:32px;height:32px;margin-bottom:8px}.pv b{display:block}.pv small{opacity:.75}
 @media(max-width:560px){.pv .cards{grid-template-columns:1fr!important}}"""
+PV.update(PV2)
 def scope(css,slug): return css.replace(".pv",".pv-"+slug)
 def preview(slug,mini=False):
+    if slug=="marketplace-infografika": return mp_preview(slug,mini)
     if mini:
         return f'<div class="pv pv-{slug} mini" aria-hidden="true"><div class="hero"><h3>Заголовок</h3><span class="btn">Кнопка</span></div><div class="cards"><div class="card"><div class="ic"></div></div><div class="card"><div class="ic"></div></div><div class="card"><div class="ic"></div></div></div></div>'
     return f'''<div class="pv pv-{slug}"><div class="hero"><h3>Баня на дровах за городом</h3><p>Парная, купель и чан. Бронь онлайн за 1 минуту.</p><button class="btn" type="button">Забронировать</button></div>
@@ -127,20 +132,20 @@ def page(path,title,desc,body,extra_css="",ld=None):
     return f'''<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{title}</title><meta name="description" content="{desc}"><link rel="canonical" href="{url}">
 <meta property="og:type" content="website"><meta property="og:title" content="{title}"><meta property="og:description" content="{desc}"><meta property="og:url" content="{url}"><meta property="og:locale" content="ru_RU"><meta property="og:image" content="{SITE}/og.png">
-<link rel="icon" href="{B}/favicon.svg" type="image/svg+xml"><style>{CSS}{PVBASE}{extra_css}</style>{ldj}</head><body>
+<link rel="stylesheet" href="{B}/fonts/fonts.css"><link rel="icon" href="{B}/favicon.svg" type="image/svg+xml"><style>{CSS}{PVBASE}{extra_css}</style>{ldj}</head><body>
 <header class="top"><div class="wrap nav"><a class="logo" href="{B}/"><span>◆</span> Дизайн-промпты</a><nav><a href="{B}/#stili">Стили</a><a href="{B}/#generator">Генератор</a></nav></div></header>
 <main>{body}</main><footer class="foot"><div class="wrap">© 2026 Дизайн-промпты · готовые промпты для нейросетей на русском</div></footer>
 <script>{open("src.js").read()}</script></body></html>'''
 allcss="".join(scope(PV[s["slug"]],s["slug"]) for s in S)
 os.makedirs("dist",exist_ok=True)
-cards="".join(f'''<a class="scard" href="{B}/stil/{s['slug']}/" data-q="{html.escape((s['name']+' '+s['ru']+' '+s['when']).lower())}">{preview(s['slug'],True)}<h3>{s['name']}</h3><p>{s['when']}</p></a>''' for s in S)
+cards="".join(f'''<a class="scard" href="{B}/stil/{s['slug']}/" data-q="{html.escape((s['name']+' '+s['ru']+' '+s['when']).lower())}" data-g="{s['grp']}|{'тёмн' if s['dark'] else 'светл'}|{'rus' if s['rus'] else ''}">{preview(s['slug'],True)}<h3>{s['name']}{' <em class="rb">Российский рынок</em>' if s['rus'] else ''}</h3><p>{s['when']}</p></a>''' for s in S)
 gen_data={"styles":{s["slug"]:dict(name=s["name"],rules=s["rules"],fonts=s["fonts"],pal=", ".join(f"{h} ({n})" for h,n in s["pal"])) for s in S},"niches":{k:dict(name=v[0],full=v[1],blocks=v[2]) for k,v in NICHES.items()}}
 opt=lambda d:"".join(f'<option value="{k}">{v}</option>' for k,v in d)
 home=f'''<section class="hero wrap"><p class="kicker">Каталог стилей · промпты на русском</p><h1>Готовые промпты для нейросетей: сайт в нужном стиле за минуту</h1>
 <p class="lead">Выберите стиль, посмотрите живое превью и скопируйте подробный промпт. Подходит для Cursor, Claude, GigaChat, YandexGPT, Bolt, Lovable, а также Тильды и Figma.</p>
 <div class="tools">{"".join(f"<span>{t}</span>" for t in ["Cursor","Claude","GigaChat","YandexGPT","Bolt","Lovable","Тильда","Figma"])}</div></section>
 <section id="stili" class="wrap"><div class="sechead"><h2>Стили</h2><input id="q" type="search" placeholder="Поиск: стекло, тёмный, B2B…" aria-label="Поиск стилей"></div>
-<div class="chips" id="chips"><button class="on" data-f="">Все</button><button data-f="светл">Светлые</button><button data-f="тёмн">Тёмные</button><button data-f="b2b">B2B</button><button data-f="it">IT</button></div>
+<div class="chips" id="chips"><button class="on" data-f="">Все</button><button data-f="Современный веб">Современный веб</button><button data-f="Ретро">Ретро</button><button data-f="Печать">Печать</button><button data-f="Нишевые">Нишевые</button><button data-f="rus">Российский рынок</button><button data-f="светл">Светлые</button><button data-f="тёмн">Тёмные</button></div>
 <div class="grid" id="grid">{cards}</div><p id="empty" hidden>Ничего не нашлось.</p></section>
 <section id="generator" class="wrap gen"><h2>Генератор промпта</h2><p>Ниша + стиль + акцентный цвет → один промпт со структурой блоков.</p>
 <div class="genrow"><label>Ниша<select id="gn">{opt((k,v[0]) for k,v in NICHES.items())}</select></label><label>Стиль<select id="gs">{opt((s["slug"],s["name"]) for s in S)}</select></label><label>Акцент<input id="gc" type="color" value="#7c5cff"></label></div>
@@ -152,7 +157,7 @@ for s in S:
     s["tags"]=("светл" if s["slug"] in light else "тёмн")
 home=home.replace('data-q="','data-q="',1)
 for s in S:
-    home=home.replace(f'href="{B}/stil/{s["slug"]}/" data-q="',f'href="{B}/stil/{s["slug"]}/" data-q="{s["tags"]} ')
+    pass
 open("dist/index.html","w").write(page("/","Дизайн-промпты — готовые промпты для нейросетей по стилям дизайна","Каталог стилей дизайна с живым превью и готовыми промптами на русском для Cursor, Claude, GigaChat, YandexGPT, Тильды и Figma. Генератор промпта под нишу.",home,allcss,
  {"@context":"https://schema.org","@type":"WebSite","name":"Дизайн-промпты","url":SITE+"/","inLanguage":"ru"}))
 for s in S:
@@ -161,7 +166,7 @@ for s in S:
     panes="".join(f'<div class="pbox" id="w{i}" {"" if i==0 else "hidden"}><button class="copy" data-t="p{i}">Скопировать</button><pre id="p{i}">{html.escape(t)}</pre></div>' for i,(_,t) in enumerate(ps))
     sw="".join(f'<li><span style="background:{h}"></span><code>{h}</code> {n}</li>' for h,n in s["pal"])
     body=f'''<article class="wrap style"><nav class="crumbs"><a href="{B}/">Главная</a> / <a href="{B}/#stili">Стили</a> / {s['name']}</nav>
-<h1>Стиль {s['name']}: промпт и живой пример</h1><p class="lead">{s['ru']}. {s['desc']}</p>
+<h1>Стиль {s['name']}: промпт и живой пример</h1><p class="meta"><span>{s['grp']}</span>{'<em class="rb">Российский рынок</em>' if s['rus'] else ''}</p><p class="lead">{s['ru']}. {s['desc']}</p>
 <div class="two"><div><h2>Превью</h2>{preview(s['slug'])}</div><div class="info"><h2>Когда подходит</h2><p>{s['when']}</p><h2>Палитра</h2><ul class="sw">{sw}</ul><h2>Шрифты с кириллицей</h2><p>{s['fonts']}</p></div></div>
 <h2>Промпт</h2><div class="tabs" role="tablist">{tabs}</div>{panes}
 <p class="next">Другие стили: {" · ".join(f'<a href="{B}/stil/{o["slug"]}/">{o["name"]}</a>' for o in S if o is not s)}</p></article>'''
